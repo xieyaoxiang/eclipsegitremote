@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>迭代遍历：map集合</title>
+</head>
+<body>
+	
+	<table border="1">
+		<tr>
+			<th>${maps}</th>
+		</tr>
+		<tr th:each="maps : ${map}">
+			<td th:text="${maps}"></td>
+		</tr>
+	</table>
+	<hr/>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>&nbsp;&nbsp;&nbsp;</th>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+		<tr th:each="maps : ${map}">
+			<div th:each="entry : ${maps}" >
+				<td th:text="${entry.value.id}"></td>
+				<td th:text="${entry.value.name}"></td>
+				<td th:text="${entry.value.age}"></td>
+			</div>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td th:each="entry : ${maps}"  th:text="${entry.value.id}"></td>
+			<td th:each="entry : ${maps}"  th:text="${entry.value.name}"></td>
+			<td th:each="entry : ${maps}"  th:text="${entry.value.age}"></td>
+		</tr>
+	</table>
+	
+</body>
+</html>

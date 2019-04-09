@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>迭代遍历</title>
+</head>
+<body>
+	
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+			
+			<th>Index</th>
+			<th>Count</th>
+			<th>Size</th>
+			<th>Even</th>
+			<th>Odd</th>
+			<th>First</th>
+			<th>Last</th>
+		</tr>
+		
+		<tr th:each="user,var : ${list}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.name}"></td>
+			<td th:text="${user.age}"></td>
+			
+			<!-- 当前迭代对象的索引 ，从0开始-->
+			<td th:text="${var.index}"></td>
+			<!-- 当前迭代对象的计数器，从1开始 -->
+			<td th:text="${var.count}"></td>
+			<!-- 被迭代对象的大小 -->
+			<td th:text="${var.size}"></td>
+			<!-- 当前迭代的对象是否为偶数 -->
+			<td th:text="${var.even}"></td>
+			<!-- 当前迭代的对象是否为奇数 -->
+			<td th:text="${var.odd}"></td>
+			<!-- 当前迭代的对象是否为第一个 -->
+			<td th:text="${var.first}"></td>
+			<!-- 当前迭代的对象是否为最后一个 -->
+			<td th:text="${var.last}"></td>
+		</tr>
+	</table>
+</body>
+</html>
