@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class App {
 
 	public static void main(String[] args) {
+		System.out.print("abc");
 		SpringApplication.run(App.class, args);
 	}
 
